@@ -1,0 +1,20 @@
+# Linux monitor config
+# Keep only what you actually monitor.
+
+file_server:
+  name: fs01
+  host: 192.168.1.10
+  smb_server: 192.168.1.10
+  share_path: "\\\\192.168.1.10\\finance"
+  username: "DOMAIN\\svc_monitor"
+  password: "CHANGE_ME"
+
+rds_server:
+  name: rds01
+  host: 192.168.1.20
+  port: 3389
+
+check_policy:
+  timeout_seconds: 3
+  fail_threshold: 3
+  recover_threshold: 2
